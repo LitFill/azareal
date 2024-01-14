@@ -5,10 +5,9 @@ import (
 )
 
 var (
-	SemuaGuru = make(map[kodeGuru]*Guru)
-
-	SemuaPelajaran []Pelajaran
-	SemuaKelas     []Kelas
+	SemuaPelajaran = make(map[kodePelaj]*Pelajaran)
+	SemuaKelas     = make(map[kodeKelas]*Kelas)
+	SemuaGuru      = make(map[kodeGuru]*Guru)
 )
 
 var (

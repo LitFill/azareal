@@ -32,7 +32,7 @@ func (p *Pelajaran) init(nama string, kode kodePelaj) {
 func NewPelajaran(nama string, kode kodePelaj) *Pelajaran {
 	pelajaran := &Pelajaran{}
 	pelajaran.init(nama, kode)
-	SemuaPelajaran = append(SemuaPelajaran, *pelajaran)
+	SemuaPelajaran[kode] = pelajaran
 	return pelajaran
 }
 
@@ -50,7 +50,7 @@ func (k *Kelas) init(nama string, kode kodeKelas) {
 func NewKelas(nama string, kode kodeKelas) *Kelas {
 	kelas := &Kelas{}
 	kelas.init(nama, kode)
-	SemuaKelas = append(SemuaKelas, *kelas)
+	SemuaKelas[kode] = kelas
 	return kelas
 }
 
