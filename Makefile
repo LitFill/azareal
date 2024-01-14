@@ -1,13 +1,22 @@
+COMPILER ?= go
+BINNAME ?= azareal
+
+BUILDCMD ?= $(COMPILER) build
+OUTPUT ?= -o $(BINNAME)
+FLAGS ?= -v
+
+RUNCMD ?= $(COMPILER) run
+
 all: build
 
 build: main.go
-	go build -o azareal
+	$(BUILDCMD) $(OUTPUT) $(FLAGS)
 
 win: main.go
-	go build -o azareal.exe
+	$(BUILDCMD) $(OUTPUT).exe $(FLAGS)
 
-run:
-	go run main.go
+run: main.go
+	$(RUNCMD) $(FLAGS) $^
 
 clean:
-	rm azareal*
+	rm $(BINNAME)*
