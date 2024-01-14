@@ -6,6 +6,18 @@ type (
 	kodeGuru  string
 )
 
+func NewKodeKelas(kode string) kodeKelas {
+	return kodeKelas(kode)
+}
+
+func NewKodePelaj(kode string) kodePelaj {
+	return kodePelaj(kode)
+}
+
+func NewKodeGuru(kode string) kodeGuru {
+	return kodeGuru(kode)
+}
+
 type Pelajaran struct {
 	Nama string
 	Kode kodePelaj
@@ -58,6 +70,6 @@ func (g *Guru) init(nama string, kode kodeGuru) {
 func NewGuru(nama string, kode kodeGuru) *Guru {
 	guru := &Guru{}
 	guru.init(nama, kode)
-	SemuaGuru = append(SemuaGuru, *guru)
+	SemuaGuru[kode] = guru
 	return guru
 }

@@ -5,7 +5,8 @@ import (
 )
 
 var (
-	SemuaGuru      []Guru
+	SemuaGuru = make(map[kodeGuru]*Guru)
+
 	SemuaPelajaran []Pelajaran
 	SemuaKelas     []Kelas
 )
