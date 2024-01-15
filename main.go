@@ -5,8 +5,10 @@ package main
 
 import (
 	"azareal/cmd"
+	"azareal/src"
 )
 
 func main() {
+	src.Init()
 	cmd.Execute()
 }

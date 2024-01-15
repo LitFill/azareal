@@ -6,18 +6,6 @@ type (
 	kodeGuru  string
 )
 
-func NewKodeKelas(kode string) kodeKelas {
-	return kodeKelas(kode)
-}
-
-func NewKodePelaj(kode string) kodePelaj {
-	return kodePelaj(kode)
-}
-
-func NewKodeGuru(kode string) kodeGuru {
-	return kodeGuru(kode)
-}
-
 type Pelajaran struct {
 	Nama string
 	Kode kodePelaj
@@ -29,13 +17,6 @@ func (p *Pelajaran) init(nama string, kode kodePelaj) {
 	p.Kode = kode
 }
 
-func NewPelajaran(nama string, kode kodePelaj) *Pelajaran {
-	pelajaran := &Pelajaran{}
-	pelajaran.init(nama, kode)
-	SemuaPelajaran[kode] = pelajaran
-	return pelajaran
-}
-
 type Kelas struct {
 	Nama string
 	Kode kodeKelas
@@ -45,13 +26,6 @@ type Kelas struct {
 func (k *Kelas) init(nama string, kode kodeKelas) {
 	k.Nama = nama
 	k.Kode = kode
-}
-
-func NewKelas(nama string, kode kodeKelas) *Kelas {
-	kelas := &Kelas{}
-	kelas.init(nama, kode)
-	SemuaKelas[kode] = kelas
-	return kelas
 }
 
 type Guru struct {
@@ -67,6 +41,33 @@ func (g *Guru) init(nama string, kode kodeGuru) {
 	g.Kode = kode
 }
 
+/***** constructors *****/
+
+func NewKodeKelas(kode string) kodeKelas {
+	return kodeKelas(kode)
+}
+
+func NewKodePelaj(kode string) kodePelaj {
+	return kodePelaj(kode)
+}
+
+func NewKodeGuru(kode string) kodeGuru {
+	return kodeGuru(kode)
+}
+
+func NewPelajaran(nama string, kode kodePelaj) *Pelajaran {
+	pelajaran := &Pelajaran{}
+	pelajaran.init(nama, kode)
+	SemuaPelajaran[kode] = pelajaran
+	return pelajaran
+}
+
+func NewKelas(nama string, kode kodeKelas) *Kelas {
+	kelas := &Kelas{}
+	kelas.init(nama, kode)
+	SemuaKelas[kode] = kelas
+	return kelas
+}
 func NewGuru(nama string, kode kodeGuru) *Guru {
 	guru := &Guru{}
 	guru.init(nama, kode)
