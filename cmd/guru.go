@@ -20,8 +20,8 @@ var guruCmd = &cobra.Command{
 		if !ok {
 			log.Fatalln("ERROR: kode guru tidak ditemukan")
 		}
-		nama := guru.Nama
-		fmt.Println(nama)
+		data := guru.ToString()
+		fmt.Println(data)
 	},
 }
 

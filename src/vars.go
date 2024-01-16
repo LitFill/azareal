@@ -26,7 +26,14 @@ var (
 )
 
 func Init() {
+	/**** registrasi guru kelas ****/
 	regGuruKelas(Nzr, T1a)
+
+	/**** registrasi guru pelajaran ****/
+	regGuruPelaj(Nzr, Nahwu)
+
+	/**** mapping pelajaran kelas ****/
+	Nzr.mapKepe(T1b.Kode, Nahwu.Kode)
 }
 
 func PrintNzr() {
