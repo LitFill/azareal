@@ -71,8 +71,6 @@ Contributions are welcome! Please feel free to submit a pull request.
 
 This project is licensed under the terms of the MIT license. See the LICENSE file for details.
 
-Berikut adalah terjemahan dari file README yang Anda berikan ke dalam Bahasa Indonesia:
-
 # Azareal
 
 Azareal adalah alat baris perintah untuk mengelola jadwal guru. Ini memungkinkan Anda untuk mendaftarkan guru untuk kelas dan mata pelajaran, dan memetakan mata pelajaran ke kelas.
