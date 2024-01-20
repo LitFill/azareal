@@ -33,7 +33,7 @@ func Init() {
 	regGuruPelaj(Nzr, Nahwu)
 
 	/**** mapping pelajaran kelas ****/
-	Nzr.mapKepe(T1b.Kode, Nahwu.Kode)
+	Nzr.mapKepe(T1a.Kode, Nahwu.Kode)
 }
 
 func PrintNzr() {
