@@ -11,7 +11,7 @@ RUNCMD := $(COMPILER) run
 
 all: build ## Build the binary for linux
 
-build: main.go ## actually build the binary
+build: main.go ## Actually build the binary
 	$(BUILDCMD) $(OUTPUT) $(FLAGS)
 
 win: main.go ## Build the binary for windows
