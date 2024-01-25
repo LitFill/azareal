@@ -1,3 +1,6 @@
+/*
+Copyright © 2024 LitFill <marrazzy54@gmail.com>
+*/
 package cmd
 
 import (
