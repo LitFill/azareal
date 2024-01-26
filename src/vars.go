@@ -154,17 +154,6 @@ var (
 	Yhy  = NewGuru("Yahya Mansur", "YHY")
 )
 
-func Init() {
-	/**** registrasi guru kelas ****/
-	regGuruKelas(Nzr, T1a)
-
-	/**** registrasi guru pelajaran ****/
-	regGuruPelaj(Nzr, Nahwu)
-
-	/**** mapping pelajaran kelas ****/
-	Nzr.mapKepe(T1a.Kode, Nahwu.Kode)
-}
-
 func PrintNzr() {
 	fmt.Println(Nzr)
 }
