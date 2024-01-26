@@ -93,5 +93,5 @@ func registrasiGuruPelajaran() {
 
 /**** mapping pelajaran kelas ****/
 func registrasiMapKepe() {
-	Nzr.mapKepe(T1a.Kode, Nahwu.Kode)
+	// Nzr.mapKepe(T1a.Kode, Nahwu.Kode)
 }
